@@ -45,7 +45,7 @@ server <- function(input, output, session) {
     if(input$adults == "adults") {
       select(filter(age_groups(), adult), -adult)
     } else {
-      age_groups()
+      select(age_groups(), -adult)
     }
   })
 
